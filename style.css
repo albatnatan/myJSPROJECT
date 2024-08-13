@@ -4,7 +4,23 @@
     margin: 0; /* אפס מרווחים */
     padding: 0; /* אפס ריפודים */
 }
+.search-container {
+    margin: 20px;
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+}
 
+input[type="Search"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
 body {
     display: flex; /* תצוגת הגוף בסדרה */
     flex-direction: column; /* סדרת תוכן בכיוון */
@@ -22,6 +38,13 @@ header {
     padding: 10px 20px; /* ריפוד פנימי */
     width: 100%; /* רוחב מלא */
     text-align: center; /* יישור הטקסט למרכז */
+}
+main{
+    background-color: #32383d; /* צבע הרקע של הכותרת */
+    color: #fff; /* צבע הטקסט */
+    padding: 10px 20px; /* ריפוד פנימי */
+    width: 100%; /* רוחב מלא */
+    text-align: center; /* יישור הטקסט למרכז */  
 }
 #background-image {
     position: fixed;
