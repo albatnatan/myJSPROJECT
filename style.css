@@ -1,226 +1,227 @@
-/* Reset default browser styles */
+/* איפוס סגנונות ברירת מחדל של הדפדפן */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* הגדרת תיבת קצה של אלמנטים */
+    margin: 0; /* איפוס רווחים חיצוניים */
+    padding: 0; /* איפוס רווחים פנימיים */
 }
 
+/* סגנונות כלליים לגוף הדף */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    direction: ltr;
-    background-color: #f9f9f9;
-    align-items: center;
+    display: flex; /* הגדרת תצוגת גמישיות עבור גוף הדף */
+    flex-direction: column; /* סידור התוכן בעמודה */
+    min-height: 100vh; /* הגדרת גובה מינימלי של 100% מהגובה של המסך */
+    margin: 0; /* איפוס רווחים חיצוניים */
+    font-family: Arial, sans-serif; /* הגדרת גופן של גוף הדף */
+    direction: ltr; /* הגדרת כיוון טקסט משמאל לימין */
+    background-color: #f9f9f9; /* הגדרת צבע רקע של הדף */
+    align-items: center; /* סידור התוכן במרכז הגוף */
 }
 
+/* סגנונות לכותרת עליונה */
 header {
-    background-color: #32383d;
-    color: #fff;
-    padding: 10px 20px;
-    width: 100%;
-    text-align: center;
-    font-size: 50px;
+    background-color: #32383d; /* צבע רקע של הכותרת */
+    color: #fff; /* צבע טקסט לבן */
+    padding: 10px 20px; /* ריפוד פנימי של הכותרת */
+    width: 100%; /* הגדרת רוחב מלא */
+    text-align: center; /* יישור הטקסט למרכז */
+    font-size: 50px; /* גודל גופן של הכותרת */
 }
 
+/* סגנונות למיכל הראשי */
 .container {
-    margin: auto;
-    overflow: auto;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto; /* רווח אוטומטי כדי למרכז את המיכל */
+    overflow: auto; /* איפוס בעיות גלילה */
+    padding: 1rem; /* ריפוד פנימי של המיכל */
+    display: flex; /* הגדרת תצוגת גמישיות */
+    flex-direction: column; /* סידור התוכן בעמודה */
+    justify-content: space-between; /* פיזור התוכן בצורה שווה */
+    align-items: center; /* סידור התוכן במרכז המיכל */
+    background-color: white; /* צבע רקע לבן */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* הוספת צל למיכל */
 }
 
+/* סגנונות למיכל החיפוש ולכפתורים העליונים */
 .search-container {
-    margin: 10px;
-    max-width: 300px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    display: inline-block;
+    margin: 10px; /* רווח חיצוני של המיכל */
+    max-width: 300px; /* הגבלת רוחב מקסימלי */
+    justify-content: center; /* יישור התוכן למרכז */
+    align-items: center; /* סידור התוכן במרכז */
+    position: relative; /* הגדרת מיקום יחסי */
+    display: inline-block; /* תצוגת בלוק inline */
 }
 
+/* סגנונות לשדה החיפוש */
 input[type="search"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    width: 100%; /* רוחב מלא של השדה */
+    padding: 10px; /* ריפוד פנימי של השדה */
+    font-size: 16px; /* גודל גופן של השדה */
+    border: 1px solid #ccc; /* גבול דק אפור לשדה */
+    border-radius: 4px; /* קימור גבולות השדה */
+    box-sizing: border-box; /* חישוב רוחב כולל של השדה */
 }
 
+/* סגנונות לכפתורים העליונים */
 .top-bar {
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem;
-    display: flex;
+    width: 100%; /* רוחב מלא של המיכל */
+    justify-content: space-between; /* פיזור הכפתורים בצורה שווה */
+    align-items: center; /* סידור הכפתורים במרכז */
+    padding: 0.5rem; /* ריפוד פנימי של המיכל */
+    display: flex; /* הגדרת תצוגת גמישיות */
 }
 
+/* סגנונות לרשימת אנשי הקשר */
 #contacts-list {
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin-top: 10px;
-    list-style-type: none;
-    width: 1100px;
+    padding: 10px; /* ריפוד פנימי של הרשימה */
+    background-color: #fff; /* צבע רקע לבן */
+    border: 1px solid #ddd; /* גבול דק אפור סביב הרשימה */
+    margin-top: 10px; /* רווח עליון של הרשימה */
+    list-style-type: none; /* הסרת סגנון התבליטים מהרשימה */
+    width: 1100px; /* רוחב קבוע של הרשימה */
 }
 
+/* סגנונות לכל איש קשר ברשימה */
 .contact {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    position: relative;
-    width: 100%;
+    margin-bottom: 10px; /* רווח תחתון בין אנשי הקשר */
+    padding: 10px; /* ריפוד פנימי של איש הקשר */
+    background-color: #f0f0f0; /* צבע רקע אפור בהיר */
+    border: 1px solid #ccc; /* גבול דק אפור סביב איש הקשר */
+    border-radius: 5px; /* קימור גבולות איש הקשר */
+    position: relative; /* מיקום יחסי של איש הקשר */
+    width: 100%; /* רוחב מלא של איש הקשר */
 }
 
+/* סגנונות לפרטי איש הקשר (תמונה ושם) */
 .contact-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* תצוגת גמישות */
+    align-items: center; /* יישור פרטי איש הקשר למרכז */
+    justify-content: space-between; /* פיזור פרטי איש הקשר בצורה שווה */
 }
 
+/* סגנונות לשם איש הקשר */
 .contact-name {
-    margin: 0;
-    color: #000;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    flex: 1;
-    float: right;
-    margin-top: 2px;
+    margin: 0; /* הסרת רווחים חיצוניים */
+    color: #000; /* צבע טקסט שחור */
+    cursor: pointer; /* סמן העכבר כיד לצבע */
+    font-size: 18px; /* גודל גופן של השם */
+    font-weight: bold; /* הדגשת גופן השם */
+    flex: 1; /* כיבוש מקום גמיש */
+    float: right; /* הצבת השם בצד ימין */
+    margin-top: 2px; /* רווח עליון קטן */
 }
 
+/* סגנונות לכפתורים של איש הקשר (מחק, עדכן, התקשר) */
 .contact-buttons {
-    margin-top: 10px;
+    margin-top: 10px; /* רווח עליון בין כפתורים לרשימת אנשי הקשר */
 }
 
+/* סגנונות לכפתורים בתוך איש הקשר */
 .contact-buttons button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin-right: 5px;
-    cursor: pointer;
-    border-radius: 3px;
+    background-color: #4CAF50; /* צבע רקע ירוק לכפתור */
+    color: white; /* צבע טקסט לבן בכפתור */
+    border: none; /* הסרת גבול מהכפתור */
+    padding: 8px 16px; /* ריפוד פנימי של הכפתור */
+    text-align: center; /* יישור טקסט למרכז */
+    text-decoration: none; /* הסרת קישוטים מהכפתור */
+    display: inline-block; /* תצוגת בלוק inline */
+    font-size: 14px; /* גודל גופן של הכפתור */
+    margin-right: 5px; /* רווח בין כפתורים */
+    cursor: pointer; /* סמן העכבר כיד */
+    border-radius: 3px; /* קימור גבולות הכפתור */
 }
 
-.btn-call:hover + .phone-number{
-    opacity: 1;
-    visibility: visible;
+/* סגנון להופעת מספר הטלפון כאשר מרחפים עם העכבר על כפתור השיחה */
+.btn-call:hover + .phone-number {
+    opacity: 1; /* הצגת מספר הטלפון */
+    visibility: visible; /* הצגת מספר הטלפון */
 }
 
+/* סגנונות למספר הטלפון של איש הקשר */
 .phone-number {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 5px 10px;
-    color: black;
-    background-color: white;
-    border-radius: 3px;
-    font-size: 18px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    position: absolute; /* מיקום מוחלט של מספר הטלפון */
+    bottom: 10px; /* מיקום מספר הטלפון בתחתית */
+    left: 50%; /* מיקום מספר הטלפון במרכז לרוחב */
+    transform: translateX(-50%); /* הצבת מספר הטלפון במרכז לרוחב */
+    padding: 5px 10px; /* ריפוד פנימי של מספר הטלפון */
+    color: black; /* צבע טקסט שחור */
+    background-color: white; /* צבע רקע לבן למספר הטלפון */
+    border-radius: 3px; /* קימור גבולות מספר הטלפון */
+    font-size: 18px; /* גודל גופן של מספר הטלפון */
+    opacity: 0; /* החבאת מספר הטלפון בהתחלה */
+    visibility: hidden; /* החבאת מספר הטלפון בהתחלה */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* מעבר חלק בין מצבים שונים */
 }
 
-
+/* סגנונות לתמונה עגלגלית של איש הקשר */
 .contact-circle {
-    float: right;
-    margin-left: 10px;
+    float: right; /* הצבת התמונה בצד ימין */
+    margin-left: 10px; /* רווח בין התמונה לשם איש הקשר */
 }
 
+/* סגנונות לתמונה בתוך עיגול */
 .contact-circle img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 50px; /* רוחב התמונה */
+    height: 50px; /* גובה התמונה */
+    border-radius: 50%; /* קימור גבולות התמונה לעיגול */
 }
 
+/* סגנונות לכותרת התחתונה */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    width: 100%;
-    text-align: right;
-    position: fixed;
-    bottom: 0;
+    background-color: #333; /* צבע רקע כהה לכותרת התחתונה */
+    color: #fff; /* צבע טקסט לבן */
+    padding: 10px 20px; /* ריפוד פנימי של הכותרת התחתונה */
+    width: 100%; /* רוחב מלא של הכותרת התחתונה */
+    text-align: right; /* יישור הטקסט לימין */
+    position: fixed; /* מיקום קבוע בתחתית הדף */
+    bottom: 0; /* מיקום בתחתית הדף */
 }
+
+/* סגנונות עבור מסכים עם רוחב מקסימלי של 430px */
 @media screen and (max-width: 430px) {
     .phone-number {
-        margin-top: 7px;
-        font-size: 18px;
+        margin-top: 7px; /* רווח עליון למספר הטלפון */
+        font-size: 18px; /* גודל גופן של מספר הטלפון */
     }
-    #contacts-list{
-        width: 103%;
+    #contacts-list {
+        width: 103%; /* רוחב הרשימה עבור מסכים קטנים */
     }
-    .container{
-        width: 100%;
+    .container {
+        width: 100%; /* רוחב מלא של המיכל עבור מסכים קטנים */
     }
-    .contact-name{
-        font-size: 15px;
+    .contact-name {
+        font-size: 15px; /* גודל גופן של שם איש הקשר עבור מסכים קטנים */
     }
-    
 }
 
+/* סגנונות עבור מסכים עם רוחב מקסימלי של 360px */
 @media screen and (max-width: 360px) {
     .phone-number {
-        margin-top: 7px;
-        font-size: 18px;
+        margin-top: 7px; /* רווח עליון למספר הטלפון */
+        font-size: 18px; /* גודל גופן של מספר הטלפון */
     }
-    #contacts-list{
-        width: 103%;
+    #contacts-list {
+        width: 103%; /* רוחב הרשימה עבור מסכים קטנים מאוד */
     }
-    .container{
-        width: 100%;
+    .container {
+        width: 100%; /* רוחב מלא של המיכל עבור מסכים קטנים מאוד */
     }
-    .contact-name{
-        font-size: 12px;
+    .contact-name {
+        font-size: 12px; /* גודל גופן של שם איש הקשר עבור מסכים קטנים מאוד */
     }
-    
-}
-@media screen and (max-width: 1024px) {
-    .phone-number {
-        margin-top: 7px;
-        font-size: 18px;
-    }
-    #contacts-list{
-        width: 100%;
-    }
-    .container{
-        width: 100%;
-    }
-    .contact-name{
-        font-size: 12px;
-    }
-    
-}
-@media screen and (max-width: 344px) {
-    .phone-number {
-        margin-top: 7px;
-        font-size: 14px;
-    }
-    #contacts-list{
-        width: 103%;
-    }
-    .container{
-        width: 100%;
-    }
-    .contact-name{
-        font-size: 10px;
-    }
-    
 }
 
+/* סגנונות עבור מסכים עם רוחב מקסימלי של 1024px */
+@media screen and (max-width: 1024px) {
+    .phone-number {
+        margin-top: 7px; /* רווח עליון למספר הטלפון */
+        font-size: 18px; /* גודל גופן של מספר הטלפון */
+    }
+    #contacts-list {
+        width: 100%; /* רוחב מלא של הרשימה עבור מסכים בגובה בינוני */
+    }
+    .container {
+        width: 100%; /* רוחב מלא של המיכל עבור מסכים בגובה בינוני */
+    }
+    .contact-name {
+        font-size: 12px; /* גודל גופן של שם איש הקשר עבור מסכים בגובה בינוני */
+    }
+}
