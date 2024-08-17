@@ -1,201 +1,226 @@
-/* איפוס סגנונות ברירת המחדל של הדפדפן */
+/* Reset default browser styles */
 * {
-    box-sizing: border-box; /* הגדרת תיבת העטיפה ל-border-box כך שהרוחב והגובה יכולים להיות מוגדרים עם padding ו- border ולא יוסיפו לגודל הסופי של האלמנט */
-    margin: 0; /* אפס מרווחים */
-    padding: 0; /* אפס ריפודים */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    direction: ltr;
+    background-color: #f9f9f9;
+    align-items: center;
+}
+
+header {
+    background-color: #32383d;
+    color: #fff;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+}
+
+.container {
+    margin: auto;
+    overflow: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .search-container {
-    margin: 20px;
+    margin: 10px;
     max-width: 300px;
     justify-content: center;
     align-items: center;
     position: relative;
-    display: flex;
+    display: inline-block;
 }
 
-input[type="Search"] {
+input[type="search"] {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Include padding and border in the element's total width */
-}
-body {
-    display: flex; /* תצוגת הגוף בסדרה */
-    flex-direction: column; /* סדרת תוכן בכיוון */
-    min-height: 100vh; /* גובה מינימלי של כל המסך */
-    margin: 0; /* אפס מרווחי סיומת */
-    font-family: Arial, sans-serif; /* סוג הגופן */
-    direction: ltr  ; /* כיוון הטקסט הממשיך */
-    background-color: #f9f9f9; /* צבע הרקע */
-    align-items: center; /* התמקדות התוכן באופן אופקי */
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #32383d; /* צבע הרקע של הכותרת */
-    color: #fff; /* צבע הטקסט */
-    padding: 10px 20px; /* ריפוד פנימי */
-    width: 100%; /* רוחב מלא */
-    text-align: center; /* יישור הטקסט למרכז */
-}
-main{
-    background-color: #32383d; /* צבע הרקע של הכותרת */
-    color: #fff; /* צבע הטקסט */
-    padding: 10px 20px; /* ריפוד פנימי */
-    width: 100%; /* רוחב מלא */
-    text-align: center; /* יישור הטקסט למרכז */  
-}
-#background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
+.top-bar {
     width: 100%;
-    height: 100%;
-    background-image: url('img/Contacts-595b40b75ba036ed117d5a3a.svg');
-    background-size: contain; /* Ensure the background image covers the entire background area */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    z-index: -1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    display: flex;
 }
 
-summary {
-    cursor: pointer; /* סמן עכבור דלג על הפרט */
-    font-weight: bold; /* משקל הטקסט */
-}
-
-/* עיצוב רשימת אנשי הקשר */
 #contacts-list {
-    padding: 10px; /* ריפוד פנימי */
-    background-color: #fff; /* צבע הרקע */
-    border: 1px solid #ddd; /* גבול */
-    margin-top: 10px; /* מרווח עליון */
-    
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    list-style-type: none;
+    width: 1100px;
 }
 
-/* סגנון פריטי איש הקשר */
 .contact {
-    margin-bottom: 10px; /* מרווח מתחתי */
-    padding: 10px; /* ריפוד פנימי */
-    background-color: #f0f0f0; /* צבע הרקע */
-    border: 1px solid #ccc; /* גבול */
-    border-radius: 5px; /* פינות מעוגלות */
-    position: relative; /* עמדה יחסית */
-    
-    
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
 }
 
 .contact-info {
-    display: flex; /* תצוגה כרכיבים בסדרה */
-    align-items: center; /* יישור תוכן אופקית */
-    justify-content: space-between; /* יישור רכיבים בין */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .contact-name {
-    margin: 0; /* אפס מרווחים */
-    color: #000; /* צבע הטקסט */
-    cursor: pointer; /* סמן עכבור */
-    font-size: 18px; /* גודל הגופן */
-    font-weight: bold; /* משקל הטקסט */
-    flex: 1; /* אפשרות להרחיב את שם האיש קשר */
+    margin: 0;
+    color: #000;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    flex: 1;
     float: right;
-    margin-top: 2px ;
-}
-
-/* סגנון לכפתור הקריאה */
-.call-button {
-    clear: both; /* איחוד עם הכיסא */
-    display: flex; /* תצוגת רכיבים בסדרה */
-    align-items: center; /* יישור תוכן אופקית */
-    justify-content: center; /* יישור רכיבים אנכי */
-    background-color: #4CAF50; /* צבע רקע ירוק */
-    color: #fff; /* צבע טקסט לבן */
-    border: 0; /* אין גבול */
-    cursor: pointer; /* סמן עכבור */
-    border-radius: 3px; /* פינות מעוגלות */
-    transition: background-color 0.3s ease; /* מעבר צבע רקע בהתאם לזמן */
-    padding: 8px 16px; /* ריפוד פנימי */
-    text-align: center; /* יישור הטקסט למרכז */
-    text-decoration: none; /* אין קווים תחתונים */
-    font-size: 14px; /* גודל הגופן */
-     border: none;
-}
-
-.call-button:hover {
-    background-color: #45a049; /* ירוק כהה בעקבות הטביעה */
-}
-
-.call-button .btn-call {
-    margin-right: 5px; /* מרווח ימין לסמל */
-    background: 0; /*כפתור שקוף*/
-    border: 0; /* כפתור ללא גבולות*/
-    color: #fff
-}
-
-/* סגנון למספר הטלפון */
-.phone-number {
-    position: absolute; /* עמדה יחסית */
-    top: 50%; /* יישור אנכי באמצע */
-    left: 50%; /* יישור אופקי באמצע */
-    transform: translate(-50%, -50%); /* הזזת מרכז */
-    padding: 5px 10px; /* ריפוד פנימי */
-    color: black; /* צבע טקסט שחור */
-    border-radius: 3px; /* פינות מעוגלות */
-    font-size: 24px; /* גודל הגופן */
-    opacity: 0; /* חצי שקיפות */
-    transition: opacity 0.3s ease; /* עבודה */
-}
-
-.call-button:hover .phone-number {
-    opacity: 1; /* הצגת פנים */
-}
-
-.contact-circle {
-    float: right; /* הזזת התמונה לימין */
-    margin-left: 10px; /* מרווח משמאל */
-}
-
-.contact-circle img {
-    width: 50px; /* רוחב התמונה */
-    height: 50px; /* גובה התמונה */
-    border-radius: 50%; /* פינות מעוגלות */
+    margin-top: 2px;
 }
 
 .contact-buttons {
-    clear: both; /* איחוד עם הכיסא */
-    margin-top: 10px; /* מרווח מעליו */
+    margin-top: 10px;
 }
 
 .contact-buttons button {
-    background-color: #4CAF50; /* צבע רקע ירוק */
-    color: white; /* צבע טקסט לבן */
-    border: none; /* אין גבול */
-    padding: 8px 16px; /* ריפוד פנימי */
-    text-align: center; /* יישור הטקסט למרכז */
-    text-decoration: none; /* אין קווים תחתונים */
-    display: inline-block; /* תצוגה כבלוק */
-    font-size: 14px; /* גודל הגופן */
-    margin-right: 5px; /* מרווח ימין */
-    cursor: pointer; /* סמן עכבור */
-    border-radius: 3px; /* פינות מעוגלות */
-}
-.contact-buttons button:hover {
-    background-color: #45a049; /* ירוק כהה בעקבות הטביעה */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 3px;
 }
 
-/* סגנון לתחתית */
+.btn-call:hover + .phone-number{
+    opacity: 1;
+    visibility: visible;
+}
+
+.phone-number {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    color: black;
+    background-color: white;
+    border-radius: 3px;
+    font-size: 18px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+.contact-circle {
+    float: right;
+    margin-left: 10px;
+}
+
+.contact-circle img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
 footer {
-    background-color: #333; /* צבע הרקע */
-    color: #fff; /* צבע הטקסט */
-    padding: 10px 20px; /* ריפוד פנימי */
-    width: 100%; /* רוחב מלא */
-    text-align: right; /* יישור הטקסט למרכז */
-    position: fixed; /* מיקום קבוע בתחתית */
-    bottom: 0; /* מיקום בתחתית */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: right;
+    position: fixed;
+    bottom: 0;
 }
 @media screen and (max-width: 430px) {
     .phone-number {
-        margin-top: 7px; /*המספר לו יופיע על השם במסכי טלפנים */
+        margin-top: 7px;
         font-size: 18px;
     }
+    #contacts-list{
+        width: 103%;
+    }
+    .container{
+        width: 100%;
+    }
+    .contact-name{
+        font-size: 15px;
+    }
+    
 }
+
+@media screen and (max-width: 360px) {
+    .phone-number {
+        margin-top: 7px;
+        font-size: 18px;
+    }
+    #contacts-list{
+        width: 103%;
+    }
+    .container{
+        width: 100%;
+    }
+    .contact-name{
+        font-size: 12px;
+    }
+    
+}
+@media screen and (max-width: 1024px) {
+    .phone-number {
+        margin-top: 7px;
+        font-size: 18px;
+    }
+    #contacts-list{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+    }
+    .contact-name{
+        font-size: 12px;
+    }
+    
+}
+@media screen and (max-width: 344px) {
+    .phone-number {
+        margin-top: 7px;
+        font-size: 14px;
+    }
+    #contacts-list{
+        width: 103%;
+    }
+    .container{
+        width: 100%;
+    }
+    .contact-name{
+        font-size: 10px;
+    }
+    
+}
+
