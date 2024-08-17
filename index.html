@@ -8,102 +8,165 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
-    <header>
-        ספר טלפונים
-    </header>
-    <div class="container">
-        <div class="search-container">
-            <input type="search" id="search" placeholder="חיפוש איש קשר " aria-label="Search" />
-            <div class="contact-buttons top-bar">
-                <button id="add-contact" class="btn-add"><i class="fas fa-user-plus"></i></button>
-                <button id="delete-all" class="btn-delete-all"><i class="fas fa-trash-alt"></i></button>
-            </div>
+  <header>
+    ספר טלפונים
+</header>
+<!-- מיכל עיקרי עבור תוכן הדף -->
+<div class="container">
+    <!-- מיכל עבור שדה החיפוש וכפתורים עליונים -->
+    <div class="search-container">
+        <!-- שדה החיפוש עבור חיפוש אנשי קשר -->
+        <input type="search" id="search" placeholder="חיפוש איש קשר " aria-label="Search" />
+        <!-- מיכל עבור כפתורים שמעל לרשימת אנשי הקשר -->
+        <div class="contact-buttons top-bar">
+            <!-- כפתור להוספת איש קשר חדש -->
+            <button id="add-contact" class="btn-add"><i class="fas fa-user-plus"></i></button>
+            <!-- כפתור למחיקת כל אנשי הקשר -->
+            <button id="delete-all" class="btn-delete-all"><i class="fas fa-trash-alt"></i></button>
         </div>
-        <ul id="contacts-list" class="expanded">
-            <li class="contact">
-                <div class="Photo-Name">
-                    <div class="contact-circle">
-                        <img src="img/natan.jpg" alt="נתן אלבט" />
-                    </div>
-                    <div class="contact-details">
-                        <p class="contact-name">נתן אלבט</p>
-                    </div>
-                </div>
-                <div class="contact-buttons">
-                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                    <button class="btn-update"><i class="fas fa-edit"></i></button>
-                    <button class="btn-call" data-number="0544447555"><i class="fas fa-phone-alt"></i></button>
-                    <span class="phone-number">0544447555</span>
-                </div>
-            </li>
-            <li class="contact">
-                <div class="Photo-Name">
-                    <div class="contact-circle">
-                        <img src="img/dania.png" alt="דאניה סואעד" />
-                    </div>
-                    <div class="contact-details">
-                        <p class="contact-name">דאניה סואעד</p>
-                    </div>
-                </div>
-                <div class="contact-buttons">
-                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                    <button class="btn-update"><i class="fas fa-edit"></i></button>
-                    <button class="btn-call" data-number="0544447555"><i class="fas fa-phone-alt"></i></button>
-                    <span class="phone-number">0544447555</span>
-                </div>
-            </li>
-            <li class="contact">
-                <div class="Photo-Name">
-                    <div class="contact-circle">
-                        <img src="img/lana.png" alt="לאנה נבואני" />
-                    </div>
-                    <div class="contact-details">
-                        <p class="contact-name">לאנה נבואני</p>
-                    </div>
-                </div>
-                <div class="contact-buttons">
-                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                    <button class="btn-update"><i class="fas fa-edit"></i></button>
-                    <button class="btn-call" data-number="0544447555"><i class="fas fa-phone-alt"></i></button>
-                    <span class="phone-number">0544447555</span>
-                </div>
-            </li>
-            <li class="contact">
-                <div class="Photo-Name">
-                    <div class="contact-circle">
-                        <img src="img/mirna.png" alt="מירנה סעב" />
-                    </div>
-                    <div class="contact-details">
-                        <p class="contact-name">מירנה סעב</p>
-                    </div>
-                </div>
-                <div class="contact-buttons">
-                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                    <button class="btn-update"><i class="fas fa-edit"></i></button>
-                    <button class="btn-call" data-number="0544447555"><i class="fas fa-phone-alt"></i></button>
-                    <span class="phone-number">0544447555</span>
-                </div>
-            </li>
-            <li class="contact">
-                <div class="Photo-Name">
-                    <div class="contact-circle">
-                        <img src="img/mohammad.png" alt="מחמד מנסור" />
-                    </div>
-                    <div class="contact-details">
-                        <p class="contact-name">מחמד מנסור</p>
-                    </div>
-                </div>
-                <div class="contact-buttons">
-                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
-                    <button class="btn-update"><i class="fas fa-edit"></i></button>
-                    <button class="btn-call" data-number="0544447555"><i class="fas fa-phone-alt"></i></button>
-                    <span class="phone-number">0544447555</span>
-                </div>
-            </li>
-        </ul>
     </div>
-    <footer>
-        <p>נתן אלבט ודאניה סואעד</p>
-    </footer>
+    <!-- רשימת אנשי הקשר -->
+    <ul id="contacts-list" class="expanded">
+        <!-- איש קשר אחד ברשימה -->
+        <li class="contact">
+            <!-- פרטי התמונה והשם של איש הקשר -->
+            <div class="Photo-Name">
+                <!-- תיבה המכילה את תמונת איש הקשר -->
+                <div class="contact-circle">
+                    <!-- התמונה של איש הקשר -->
+                    <img src="img/natan.jpg" alt="נתן אלבט" />
+                </div>
+                <!-- פרטי איש הקשר (שם וכו') -->
+                <div class="contact-details">
+                    <!-- שם איש הקשר -->
+                    <p class="contact-name">נתן אלבט</p>
+                </div>
+            </div>
+            <!-- כפתורים של איש הקשר (מחק, עדכן, התקשר) -->
+            <div class="contact-buttons">
+                <!-- כפתור למחיקת איש הקשר -->
+                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                <!-- כפתור לעריכת איש הקשר -->
+                <button class="btn-update"><i class="fas fa-edit"></i></button>
+                <!-- כפתור להתקשרות עם איש הקשר -->
+                <button class="btn-call" data-number="0544447555"><i class="fas fa-phone-alt"></i></button>
+                <!-- מספר הטלפון של איש הקשר -->
+                <span class="phone-number">0544447555</span>
+            </div>
+        </li>
+        <!-- איש קשר נוסף ברשימה -->
+        <li class="contact">
+            <!-- פרטי התמונה והשם של איש הקשר -->
+            <div class="Photo-Name">
+                <!-- תיבה המכילה את תמונת איש הקשר -->
+                <div class="contact-circle">
+                    <!-- התמונה של איש הקשר -->
+                    <img src="img/dania.png" alt="דאניה סואעד" />
+                </div>
+                <!-- פרטי איש הקשר (שם וכו') -->
+                <div class="contact-details">
+                    <!-- שם איש הקשר -->
+                    <p class="contact-name">דאניה סואעד</p>
+                </div>
+            </div>
+            <!-- כפתורים של איש הקשר (מחק, עדכן, התקשר) -->
+            <div class="contact-buttons">
+                <!-- כפתור למחיקת איש הקשר -->
+                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                <!-- כפתור לעריכת איש הקשר -->
+                <button class="btn-update"><i class="fas fa-edit"></i></button>
+                <!-- כפתור להתקשרות עם איש הקשר -->
+                <button class="btn-call" data-number="0544447555"><i class="fas fa-phone-alt"></i></button>
+                <!-- מספר הטלפון של איש הקשר -->
+                <span class="phone-number">0544447555</span>
+            </div>
+        </li>
+        <!-- איש קשר נוסף ברשימה -->
+        <li class="contact">
+            <!-- פרטי התמונה והשם של איש הקשר -->
+            <div class="Photo-Name">
+                <!-- תיבה המכילה את תמונת איש הקשר -->
+                <div class="contact-circle">
+                    <!-- התמונה של איש הקשר -->
+                    <img src="img/lana.png" alt="לאנה נבואני" />
+                </div>
+                <!-- פרטי איש הקשר (שם וכו') -->
+                <div class="contact-details">
+                    <!-- שם איש הקשר -->
+                    <p class="contact-name">לאנה נבואני</p>
+                </div>
+            </div>
+            <!-- כפתורים של איש הקשר (מחק, עדכן, התקשר) -->
+            <div class="contact-buttons">
+                <!-- כפתור למחיקת איש הקשר -->
+                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                <!-- כפתור לעריכת איש הקשר -->
+                <button class="btn-update"><i class="fas fa-edit"></i></button>
+                <!-- כפתור להתקשרות עם איש הקשר -->
+                <button class="btn-call" data-number="0544447555"><i class="fas fa-phone-alt"></i></button>
+                <!-- מספר הטלפון של איש הקשר -->
+                <span class="phone-number">0544447555</span>
+            </div>
+        </li>
+        <!-- איש קשר נוסף ברשימה -->
+        <li class="contact">
+            <!-- פרטי התמונה והשם של איש הקשר -->
+            <div class="Photo-Name">
+                <!-- תיבה המכילה את תמונת איש הקשר -->
+                <div class="contact-circle">
+                    <!-- התמונה של איש הקשר -->
+                    <img src="img/mirna.png" alt="מירנה סעב" />
+                </div>
+                <!-- פרטי איש הקשר (שם וכו') -->
+                <div class="contact-details">
+                    <!-- שם איש הקשר -->
+                    <p class="contact-name">מירנה סעב</p>
+                </div>
+            </div>
+            <!-- כפתורים של איש הקשר (מחק, עדכן, התקשר) -->
+            <div class="contact-buttons">
+                <!-- כפתור למחיקת איש הקשר -->
+                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                <!-- כפתור לעריכת איש הקשר -->
+                <button class="btn-update"><i class="fas fa-edit"></i></button>
+                <!-- כפתור להתקשרות עם איש הקשר -->
+                <button class="btn-call" data-number="0544447555"><i class="fas fa-phone-alt"></i></button>
+                <!-- מספר הטלפון של איש הקשר -->
+                <span class="phone-number">0544447555</span>
+            </div>
+        </li>
+        <!-- איש קשר נוסף ברשימה -->
+        <li class="contact">
+            <!-- פרטי התמונה והשם של איש הקשר -->
+            <div class="Photo-Name">
+                <!-- תיבה המכילה את תמונת איש הקשר -->
+                <div class="contact-circle">
+                    <!-- התמונה של איש הקשר -->
+                    <img src="img/mohammad.png" alt="מחמד מנסור" />
+                </div>
+                <!-- פרטי איש הקשר (שם וכו') -->
+                <div class="contact-details">
+                    <!-- שם איש הקשר -->
+                    <p class="contact-name">מחמד מנסור</p>
+                </div>
+            </div>
+            <!-- כפתורים של איש הקשר (מחק, עדכן, התקשר) -->
+            <div class="contact-buttons">
+                <!-- כפתור למחיקת איש הקשר -->
+                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                <!-- כפתור לעריכת איש הקשר -->
+                <button class="btn-update"><i class="fas fa-edit"></i></button>
+                <!-- כפתור להתקשרות עם איש הקשר -->
+                <button class="btn-call" data-number="0544447555"><i class="fas fa-phone-alt"></i></button>
+                <!-- מספר הטלפון של איש הקשר -->
+                <span class="phone-number">0544447555</span>
+            </div>
+        </li>
+    </ul>
+</div>
+<!-- כותרת תחתונה של הדף -->
+<footer>
+    <p>נתן אלבט ודאניה סואעד</p>
+</footer>
 </body>
 </html>
